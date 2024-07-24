@@ -6,7 +6,7 @@ import classes from "./HeaderMenu.module.css";
 const links = [
   { link: "/about", label: "About Me | " },
   { link: "/services", label: "Services | " },
-  { link: "/placeholder", label: "PlaceHolder" },
+  { link: "/contact", label: "Contact" },
 ];
 
 export default function HeaderMenu() {
