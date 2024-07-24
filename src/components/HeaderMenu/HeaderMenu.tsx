@@ -1,4 +1,4 @@
-import { Menu, Group, Center, Burger, Container, Text } from "@mantine/core";
+import { Group, Burger, Container } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./HeaderMenu.module.css";
