@@ -1,5 +1,4 @@
-import { AppShell, Burger } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { AppShell, Burger, Center } from "@mantine/core";
 import { ReactNode } from "react";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 
@@ -8,10 +7,8 @@ interface AppWrapperProps {
 }
 
 export default function AppWrapper({ children }: AppWrapperProps) {
-  const [opened, { toggle }] = useDisclosure();
-
   return (
-    <AppShell header={{ height: 60 }} padding="md">
+    <AppShell header={{ height: 60 }} padding="sm">
       <AppShell.Header>
         <HeaderMenu />
       </AppShell.Header>
