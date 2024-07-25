@@ -1,19 +1,13 @@
-import {
-  Text,
-  Title,
-  TextInput,
-  Button,
-  Image,
-  useMantineTheme,
-} from "@mantine/core";
-import classes from "./Banner.module.css";
+import { Text, Title, TextInput, Button, Image } from "@mantine/core";
+import classes from "./Services.module.css";
+import { useMantineTheme } from "@mantine/core";
 
-export default function Banner() {
+export default function Services() {
   const theme = useMantineTheme();
   return (
     <div
       className={classes.wrapper}
-      style={{ backgroundColor: theme.colors.purpleJen[0] }}
+      style={{ backgroundColor: theme.colors.purpleJen[7] }}
     >
       <div className={classes.body}>
         <Title className={classes.title}>Wait a minute...</Title>

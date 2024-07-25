@@ -8,7 +8,7 @@ interface AppWrapperProps {
 
 export default function AppWrapper({ children }: AppWrapperProps) {
   return (
-    <AppShell header={{ height: 60 }} padding="sm">
+    <AppShell header={{ height: 60 }}>
       <AppShell.Header>
         <HeaderMenu />
       </AppShell.Header>
