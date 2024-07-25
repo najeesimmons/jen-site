@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.body}>
-        <Title className={classes.title}>Wait a minute...</Title>
+        <Title className={classes.title}>About Me</Title>
         <Text fw={500} fz="lg" mb={5}>
           Subscribe to our newsletter!
         </Text>

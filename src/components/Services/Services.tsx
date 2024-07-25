@@ -10,7 +10,7 @@ export default function Services() {
       style={{ backgroundColor: theme.colors.purpleJen[7] }}
     >
       <div className={classes.body}>
-        <Title className={classes.title}>Wait a minute...</Title>
+        <Title className={classes.title}>Services</Title>
         <Text fw={500} fz="lg" mb={5}>
           Subscribe to our newsletter!
         </Text>

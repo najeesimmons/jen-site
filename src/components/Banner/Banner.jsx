@@ -16,7 +16,7 @@ export default function Banner() {
       style={{ backgroundColor: theme.colors.purpleJen[0] }}
     >
       <div className={classes.body}>
-        <Title className={classes.title}>Wait a minute...</Title>
+        <Title className={classes.title}>First Message</Title>
         <Text fw={500} fz="lg" mb={5}>
           Subscribe to our newsletter!
         </Text>

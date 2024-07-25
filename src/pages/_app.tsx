@@ -10,13 +10,13 @@ import AppWrapper from "@/components/AppWrapper/AppWrapper";
 
 export default function App({ Component, pageProps }: AppProps) {
   const purpleJen: MantineColorsTuple = [
-    "#fbf5fd", // in use
+    "#fbf5fd", // 0 in use
     "#dce4f5",
     "#c8bad2",
     "#aa91bd",
     "#9e84b2",
     "#8e72a3",
-    "#826797", // in use
+    "#826797", // 7 in use
     "#b1a5ba",
     "#705883",
     "#69527c",

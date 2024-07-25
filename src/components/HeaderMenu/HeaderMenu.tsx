@@ -1,41 +1,56 @@
-import { Group, Burger, Container } from "@mantine/core";
+import { Group, Burger, Container, useMantineTheme, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./HeaderMenu.module.css";
+import { headers } from "next/headers";
 
 const links = [
-  { link: "/about", label: "About Me | " },
-  { link: "/services", label: "Services | " },
-  { link: "/contact", label: "Contact" },
+  { link: "/about", label: "About Me  | " },
+  { link: "/services", label: " Services  | " },
+  { link: "/contact", label: " Contact" },
 ];
 
 export default function HeaderMenu() {
   const [opened, { toggle }] = useDisclosure(false);
+  const theme = useMantineTheme();
 
   const items = links.map((link) => {
     return (
-      <a
-        key={link.label}
-        href={link.link}
-        className={classes.link}
-        onClick={(event) => event.preventDefault()}
-      >
+      <Text key={link.label} style={{ cursor: "pointer" }} fw={400}>
         {link.label}
-      </a>
+      </Text>
     );
   });
 
   return (
-    <header className={classes.header}>
-      <Container size="md">
-        <div className={classes.inner}>
+    <>
+      <header
+        className={classes.preHeader}
+        style={{ backgroundColor: theme.colors.purpleJen[7] }}
+      >
+        <Container
+          size="lg"
+          display={"flex"}
+          style={{ justifyContent: "space-between" }}
+        >
+          <Text size="sm" fw={300}>
+            Questions? Call 111-111-1111
+          </Text>
+        </Container>
+      </header>
+      <header className={classes.header}>
+        <Container
+          size="md"
+          display={"flex"}
+          style={{ justifyContent: "space-between", alignItems: "center" }}
+        >
           <MantineLogo size={28} />
-          <Group gap={5} visibleFrom="sm">
+          <Group gap={15} visibleFrom="sm">
             {items}
           </Group>
           <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-        </div>
-      </Container>
-    </header>
+        </Container>
+      </header>
+    </>
   );
 }
