@@ -1,12 +1,19 @@
-import { Group, Burger, Container, useMantineTheme, Text } from "@mantine/core";
+import {
+  Group,
+  Burger,
+  Container,
+  useMantineTheme,
+  Text,
+  Anchor,
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./HeaderMenu.module.css";
-import { headers } from "next/headers";
 
 const links = [
-  { link: "/about", label: "About Me  | " },
-  { link: "/services", label: " Services  | " },
+  { link: "/home", label: "Home  | ", href: "#home" },
+  { link: "/about", label: "About Me  | ", href: "#about" },
+  { link: "/services", label: " Services  | ", href: "#services" },
   { link: "/contact", label: " Contact" },
 ];
 
@@ -16,9 +23,16 @@ export default function HeaderMenu() {
 
   const items = links.map((link) => {
     return (
-      <Text key={link.label} style={{ cursor: "pointer" }} fw={400}>
-        {link.label}
-      </Text>
+      <Anchor
+        href={link.href}
+        key={link.label}
+        style={{ cursor: "pointer" }}
+        fw={500}
+        c={"black"}
+        underline="never"
+      >
+        <div>{link.label}</div>
+      </Anchor>
     );
   });
 

@@ -6,12 +6,13 @@ import {
   Image,
   useMantineTheme,
 } from "@mantine/core";
-import classes from "./Banner.module.css";
+import classes from "./Home.module.css";
 
-export default function Banner() {
+export default function Home() {
   const theme = useMantineTheme();
   return (
     <div
+      id="home"
       className={classes.wrapper}
       style={{ backgroundColor: theme.colors.purpleJen[0] }}
     >

@@ -3,7 +3,7 @@ import classes from "./AboutMe.module.css";
 
 export default function AboutMe() {
   return (
-    <div className={classes.wrapper}>
+    <div id="about" className={classes.wrapper}>
       <div style={{ maxWidth: 900, display: "flex", margin: "0 auto" }}>
         <div className={classes.body}>
           <Title className={classes.title}>About Me</Title>

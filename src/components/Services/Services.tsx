@@ -6,6 +6,7 @@ export default function Services() {
   const theme = useMantineTheme();
   return (
     <div
+      id="services"
       className={classes.wrapper}
       style={{ backgroundColor: theme.colors.purpleJen[7] }}
     >
