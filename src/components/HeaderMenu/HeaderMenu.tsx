@@ -5,15 +5,17 @@ import {
   useMantineTheme,
   Text,
   Anchor,
+  Image,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./HeaderMenu.module.css";
+import Logo from "../Logo/Logo";
 
 const links = [
   { link: "/home", label: "Home  | ", href: "#home" },
-  { link: "/about", label: "About Me  | ", href: "#about" },
   { link: "/services", label: " Services  | ", href: "#services" },
+  { link: "/about", label: "About Me  | ", href: "#about" },
   { link: "/contact", label: " Contact" },
 ];
 
@@ -58,11 +60,18 @@ export default function HeaderMenu() {
           display={"flex"}
           style={{ justifyContent: "space-between", alignItems: "center" }}
         >
-          <MantineLogo size={28} />
-          <Group gap={15} visibleFrom="sm">
+          {/* <MantineLogo size={28} /> */}
+          <Logo />
+          <Group gap={15} visibleFrom="sm" mb="15px">
             {items}
           </Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            size="sm"
+            hiddenFrom="sm"
+            mb={"15px"}
+          />
         </Container>
       </header>
     </>
